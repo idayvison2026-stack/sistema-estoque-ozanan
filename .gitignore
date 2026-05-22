@@ -1,0 +1,4 @@
+node_modules
+frontend/node_modules
+database/estoque.db
+.env
