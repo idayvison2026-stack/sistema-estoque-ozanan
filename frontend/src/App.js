@@ -40,7 +40,7 @@ function App() {
   async function buscarProdutos() {
 
     const resposta = await axios.get(
-      'http://localhost:3000/produtos'
+      'https://sistema-estoque-ozanan.onrender.com/produtos'
     );
 
     setProdutos(resposta.data);
@@ -50,7 +50,7 @@ function App() {
   async function buscarFornecedores() {
 
     const resposta = await axios.get(
-      'http://localhost:3000/fornecedores'
+      'https://sistema-estoque-ozanan.onrender.com/fornecedores'
     );
 
     setFornecedores(resposta.data);
@@ -60,7 +60,7 @@ function App() {
   async function buscarAssociacoes() {
 
     const resposta = await axios.get(
-      'http://localhost:3000/associacoes'
+      'https://sistema-estoque-ozanan.onrender.com/associacoes'
     );
 
     setAssociacoes(resposta.data);
@@ -90,7 +90,7 @@ function App() {
     if (produtoEditando) {
 
       await axios.put(
-        `http://localhost:3000/produtos/${produtoEditando}`,
+        `https://sistema-estoque-ozanan.onrender.com/produtos/${produtoEditando}`,
         dados
       );
 
@@ -101,7 +101,7 @@ function App() {
     } else {
 
       await axios.post(
-        'http://localhost:3000/produtos',
+        'https://sistema-estoque-ozanan.onrender.com/produtos',
         dados
       );
 
@@ -145,7 +145,7 @@ function App() {
     }
 
     await axios.delete(
-      `http://localhost:3000/produtos/${id}`
+      `https://sistema-estoque-ozanan.onrender.com/produtos/${id}`
     );
 
     alert('Produto excluído com sucesso!');
@@ -180,7 +180,7 @@ function App() {
     if (fornecedorEditando) {
 
       await axios.put(
-        `http://localhost:3000/fornecedores/${fornecedorEditando}`,
+        `https://sistema-estoque-ozanan.onrender.com/fornecedores/${fornecedorEditando}`,
         dados
       );
 
@@ -191,7 +191,7 @@ function App() {
     } else {
 
       await axios.post(
-        'http://localhost:3000/fornecedores',
+        'https://sistema-estoque-ozanan.onrender.com/fornecedores',
         dados
       );
 
@@ -236,7 +236,7 @@ function App() {
     }
 
     await axios.delete(
-      `http://localhost:3000/fornecedores/${id}`
+      `https://sistema-estoque-ozanan.onrender.com/fornecedores/${id}`
     );
 
     alert('Fornecedor excluído com sucesso!');
@@ -255,7 +255,7 @@ function App() {
     try {
 
       await axios.post(
-        'http://localhost:3000/associacoes',
+        'https://sistema-estoque-ozanan.onrender.com/associacoes',
         {
           produto_id: produtoId,
           fornecedor_id: fornecedorId
@@ -277,7 +277,7 @@ function App() {
   async function removerAssociacao(id) {
 
     await axios.delete(
-      `http://localhost:3000/associacoes/${id}`
+      `https://sistema-estoque-ozanan.onrender.com/associacoes/${id}`
     );
 
     alert('Fornecedor desassociado com sucesso!');
