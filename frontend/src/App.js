@@ -287,7 +287,7 @@ function App() {
   }
 
   const produtoSelecionado = produtos.find(
-    (produto) => produto.id == produtoId
+    (produto) => produto.id === produtoId
   );
 
   return (
